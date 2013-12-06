@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Human talk : LESS</title>
+
+		<meta name="description" content="A presentation on LESS for Geneva Human Talks">
+		<meta name="author" content="Audrey Lièvremont">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="css/perso.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+		<div class="slides">
+    <section>
+        <section>
+            <h1>
+                <br>
+                </h1>
+<h1>Less et compagnie</h1>
+<div>Les préprocesseurs CSS vous sauvent la vie</div>
+            </section>
+            <section>
+                <h2>Audrey Lièvremont</h2>
+<div>
+<img id="avatar" src="images/avatar_octomom.png"/>
+<ul>
+<li>Développeuse chez AIM</li>
+<li>jDuchess</li>
+</ul>
+            </div>
+        </section>
+    </section>
+    <section>
+        <section>
+            <h2>CSS : quelques rappels</h2>
+<div>
+<ul>
+<li class="fragment" data-fragment-index="0">CSS 1 &nbsp;: 1996</li>
+<li class="fragment" data-fragment-index="1">CSS 2 : 1998</li>
+<li class="fragment" data-fragment-index="2">CSS 2.1 : 2001 - 2007</li>
+<li class="fragment" data-fragment-index="3">CSS 3 : 1999 - ?</li>
+<li class="fragment" data-fragment-index="4">CSS4 : 2010 - ?</li>
+</ul>
+<div style="text-align: left;">
+            <br>
+        </div>
+</div>
+    </section>
+    <section>
+        <h2>
+<span>Cascading Stylesheet</span>
+        <br>
+</h2>
+<div>
+        <ul>
+<li class="fragment">Structure et présentation</li>
+<li class="fragment">Différents media</li>
+<li class="fragment">Styles utilisateurs</li>
+</ul>
+    </div>
+</section>
+<section>
+    <h2>CSS le mal aimé</h2>
+<div>
+<img src="images/clip-art-calimero-476185.jpg" style="width: 171.57107526413787px; height: 227.70370382732818px; max-height: none; max-width: none;">
+    <br>
+</div>
+<div>
+    <ul>
+<li class="fragment">Compatibilité navigateur</li>
+<li class="fragment">Copier/Coller</li>
+</ul>
+</div>
+</section>
+</section>
+<section>
+    <section>
+        <h2>Préprocesser son CSS ?</h2>
+<div>
+        <ul>
+<li class="fragment">DRY</li>
+<li class="fragment">Lisibilité</li>
+<li class="fragment">Gain de temps</li>
+</ul>
+    </div>
+</section>
+<section>
+<h2>Moins de CSS</h2>
+<div>
+<h3>Côté client</h3>
+<pre><code><link rel="stylesheet/less" type="text/css" href="styles.less" /></span>
+</code></pre>
+</div>
+<pre><code><script src="less.js" type="text/javascript"></script></code></pre>
+<div>
+<div class="fragment">
+<h3>Côté serveur</h3>
+<div>
+<ul>
+<li>Node JS</li>
+<li>Rhino</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2>Moins de CSS</h2>
+<div>
+	<h3>Logiciels</h3>
+	<ul>
+		<li>Crunch (Adobe AIR)</li>
+		<li>SimpLess</li>
+		<li>Eclipse Plugin</li>
+	</ul>
+</div>
+</section>
+<section>
+    <h2>Des variables</h2>
+<div>
+<pre><code>@couleur : #13BEEF;</code></pre>
+</div>
+<div class="fragment">
+<pre><code>h1{
+   color: @couleur;
+   size: 2em;
+}
+
+h2{
+   color: @couleur;
+   size: 1.5em;
+}</code></pre>
+</div>
+</section>
+<section>
+    <h2>Des mixins</h2>
+<div>
+<pre><code>.transition(@transition : color .2s ease-in-out){
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    -ms-transition: @transition;
+    transition: @transition;
+} </code></pre>
+</div>
+<div class="fragment">
+<pre><code>.transition(opacity .25s ease .1s); </code></pre>
+</div>
+</section>
+<section>
+    <h2>De l'imbrication</h2>
+<div>
+<pre><code>#titre{
+  font-size: 2em;
+  color: black;
+  p {
+    font-size: 1em;
+    &.colore{
+      color: blue;
+    }
+  }
+}</code></pre>
+</div>
+<div class="fragment">
+<pre><code>#titre {...}
+#titre p {...}
+#titre p.colore {...}</code></pre>
+</div>
+</section>
+<section>
+    <h2>Encore de l'imbrication</h2>
+<div>
+<pre><code>
+a{
+  font-size: 1.5em;
+  text-decoration: underline;
+  &:hover {
+    color: @couleur;
+  }
+}</code></pre>
+</div>
+</section>
+<section>
+    <h2>Des opérations</h2>
+<div>
+<pre><code>@bordure : 1px;
+.title {
+  border-left: @bordure;
+  border-right: @bordure * 3;
+}</code></pre>
+</div>
+<div class="fragment">
+<pre><code>@couleur : #13BEEF;
+h1{
+  color: @couleur;
+}
+h2{
+  color: (@couleur + #003300);
+}
+h3{
+  color: desaturate(@color, 20%);
+}</code></pre>
+</div>
+<div>
+<br>
+</div>
+</section>
+<section>
+<h2>Des inclusions</h2>
+<div>
+<pre><code>@import('titres');</code></pre>
+</div>
+<div>
+<pre><code>@import('titres.less');</code></pre>
+</div>
+</section>
+<section>
+<h2>Bootrstrap</h2>
+<div>
+	<img src="images/fichiers-bootstrap.png"/>
+</div>
+</section>
+<section id="heritage">
+<h2>De l'héritage</h2>
+<div>Avant...</div>
+<div class="absolute-element" id="heritage-less-avant">
+<pre><code>.button {
+  background: white;
+  display: block;
+  width: 120px;
+}
+.blue-button {
+  .button();
+  background: blue;
+}</code></pre>
+</div>
+<div class="absolute-element" id="heritage-css-avant">
+<pre><code>.button {
+  background: white;
+  display: block;
+  width: 120px;
+}
+.blue-button {
+  display: block;
+  width: 120px;
+  background: blue;
+}</code></pre>
+</div>
+<div class="absolute-element fragment" id="heritage-titre-apres">Après !</div>
+<div class="absolute-element fragment" id="heritage-less-apres">
+<pre><code>.button {
+  background: white;
+  display: block;
+  width: 120px;
+}
+.blue-button {
+  &amp;:extend(.button);
+  background: blue;
+}</code></pre>
+</div>
+<div class="absolute-element fragment" id="heritage-css-apres">
+<pre><code>.button, .blue-button {
+  background: white;
+  display: block;
+  width: 120px;
+}
+.blue-button {
+  background: blue;
+}</code></pre>
+</div>
+<div>
+    <br>
+</div>
+</section>
+</section>
+<section>
+    <h2>Des questions ?</h2>
+</section>
+<section>
+    <h2>Références</h2>
+    <p>
+</p>
+<ul>
+    <font style="font-size: 24px;">
+        <li>
+            <font>
+                <a href="http://lesscss.org/">http://lesscss.org/</a>
+            </font>
+            <br>
+        </li>
+        <li>
+            <a href="http://fr.wikipedia.org/wiki/LESS_(langage)">http://fr.wikipedia.org/wiki/LESS_(langage)</a>
+            <br>
+        </li>
+        <li>
+            <a href="http://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade">http://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade</a>
+            <br>
+        </li>
+        <li>
+            <font style="text-align: center;">
+                <a href="http://www.scottlogic.com/blog/2013/03/08/extends-in-less.html" style="text-align: center;">http://www.scottlogic.com/blog/2013/03/08/extends-in-less.html</a>
+            </font>
+        </li>
+    </font>
+</ul>
+<p>
+</p>
+</section>
+</div>
+
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

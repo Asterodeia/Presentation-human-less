@@ -1,0 +1,13 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+#avatar{vertical-align:middle;}
+#heritage{height:600px;}
+.bloc{position:absolute;z-index:4;max-width:none;max-height:none;}
+.gauche{left:92px;}
+.droite{left:512px;}
+.haut{top:146px;}
+.bas{top:439px;}
+#heritage-less-avant{position:absolute;z-index:4;max-width:none;max-height:none;width:337px;height:242px;left:92px;top:146px;}
+#heritage-css-avant{position:absolute;z-index:4;max-width:none;max-height:none;width:360px;height:258px;left:512px;top:146px;}
+#heritage-titre-apres{position:absolute;z-index:4;max-width:none;max-height:none;width:117px;height:47px;left:411px;top:401px;}
+#heritage-less-apres{position:absolute;z-index:4;max-width:none;max-height:none;width:340px;height:240px;left:92px;top:439px;}
+#heritage-css-apres{position:absolute;z-index:4;max-width:none;max-height:none;width:363.5397631133672px;height:244px;left:512px;top:439px;}

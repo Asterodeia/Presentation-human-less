@@ -2,6 +2,15 @@
     vertical-align: middle;   
 }
 @couleur-human: #2e0116;
+#titre {
+	h2{
+		color: @couleur-human;
+	}
+}
+
+img#bootrstrap{
+	width: 700px;
+}
 
 #heritage {
     height: 600px;    
@@ -31,23 +40,23 @@
 }
 
 #heritage-less-avant{
-    .bloc;
+    &:extend(.bloc);
+	&:extend(.gauche);
+	&:extend(.haut);
     width: 337px; 
     height: 242px; 
-    .gauche;
-    .haut; 
 }
 
 #heritage-css-avant{
-    .bloc;
+    &:extend(.bloc);
+	&:extend(.droite);
+	&:extend(.haut);
     width: 360px;
     height: 258px;
-    .droite;
-    .haut;
 }
 
 #heritage-titre-apres{
-    .bloc;
+    &:extend(.bloc);
     width: 117px; 
     height: 47px; 
     left: 411px; 
@@ -55,17 +64,17 @@
 }
 
 #heritage-less-apres{
-    .bloc;
-    width: 340px; 
+	&:extend(.bloc);
+	&:extend(.gauche);
+	&:extend(.bas);
+    width: 360px; 
     height: 240px; 
-    .gauche;
-    .bas;
 }
 
 #heritage-css-apres{
-    .bloc;
+    &:extend(.bloc);
+	&:extend(.droite);
+	&:extend(.bas);
     width: 363.5397631133672px;
     height: 244px;
-    .droite;
-    .bas;
 }

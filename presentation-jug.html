@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Human talk : LESS</title>
+
+		<meta name="description" content="A presentation on HTML for Geneva JUG">
+		<meta name="author" content="Audrey Lièvremont">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+<div class="slides">
+    <section>
+        <section>
+<h1>Clean HTML</h1>
+<div>Geneva JUG 28/01/2014</div>
+</section>
+<section>           
+<div>
+<ul>
+<li>Audrey Lièvremont</li>
+<li>AIM</li>
+<li>jDuchess</li>
+<li>@alievremont</li>
+</ul>
+</div>
+</section>
+</section>
+<section>
+<section>
+<h2>
+HTML
+</h2>
+<h2>=</h2>
+<h2>
+Hypertext Markup Language
+</h2>
+</section>
+<section>     
+<pre><code style="text-align: center; "><a href="jug.html">HTML a été créé pour cela</a></font></code></pre>
+</section>
+<section>
+<h2>Historique</h2>
+<div>
+<img src="images/Historique_HTML.png">
+    <br>
+</div>
+</section>
+<section>
+<h2>Le HTML ne sert pas à décrire le <font color="#6aa84f">rendu</font> des pages</h2>
+</section>
+<section>
+<h2>Interopérabilité du <font color="#6aa84f">HTML</font>
+</h2>
+<div>
+    <br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<ul>
+<li>
+<font color="#434343">Navigateurs desktop</font>
+</li>
+<li>
+<font color="#434343">Navigateurs mobiles</font>
+</li>
+<li>
+<font color="#434343">Lecteurs d'écran</font>
+</li>
+<li>
+<font color="#434343">Navigateurs en mode texte...</font>
+</li>
+</ul>
+</div>
+</section>
+<section data-background-size="cover" data-background-image="images/ModeleMVC.png">
+<h2 class="absolute-element fragment" style="position: absolute; width: 188px; height: 64px; z-index: 4; left: 155px; top: 237px;">
+<font color="#6aa84f">HTML</font>
+</h2>
+<h2 class="absolute-element fragment" style="position: absolute; width: 116px; height: 64px; z-index: 4; left: 362px; top: 408px;">
+<font color="#6aa84f">CSS</font>
+</h2>
+<h2 class="absolute-element fragment" style="position: absolute; width: 296px; height: 64px; z-index: 4; left: 437px; top: 238px;">
+<font color="#6aa84f">JavaScript</font>
+</h2>
+</section>
+</section>
+<section>
+    <section>
+<h2>Pourquoi ne faut-il pas faire de mise en page avec des <font color="#6aa84f">&lt;table&gt; </font>
+        <font color="#434343">?</font>
+</h2>
+    </section>
+    <section>
+<h2>Parce que ce n'est <font color="#6aa84f">pas fait pour cela</font> !</h2>
+<div class="fragment">Oui, mais...</div>
+    </section>
+    <section>    
+<img src="images/table-1.png">
+    </section>
+    <section>
+<h2 class="fragment" data-fragment-index="0">160 caractères</h2>
+<pre><code>&lt;table&gt;</code><code>&lt;tr id="first"&gt;&lt;td colspan="3"&gt;1&lt;/td&gt;&lt;/tr&gt;</code><code>&lt;tr id="second"&gt;&lt;td colspan="2"&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;</code><code>&lt;tr id="third"&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;/tr&gt;</code><code>&lt;/table&gt;</code></pre>
+<h2 class="fragment" data-fragment-index="1">115 caractères</h2>
+<pre><code>&lt;div id="bloc1"&gt;1&lt;/div&gt;</code><code>&lt;div id="bloc2"&gt;2&lt;/div&gt;</code><code>&lt;div id="bloc3"&gt;3&lt;/div&gt;</code><code>&lt;div id="bloc4"&gt;4&lt;/div&gt;</code><code>&lt;div id="bloc5"&gt;5&lt;/div&gt;</code>    </pre>
+
+<h2 class="fragment" data-fragment-index="2">+ 39%</h2>
+
+</section>
+</section>
+<section>
+    <h2>Références</h2>
+<div>
+<p>
+</p>
+<p>
+</p>
+<ul>
+<li>
+<font style="font-size: 24px;">Spécification de HTML living standards : http://www.whatwg.org/specs/web-apps/current-work/multipage/introduction.html#abstract</font>
+</li>
+<li>
+<font style="font-size: 24px;">Image sur le modèle MVC par Deltacen</font>
+</li>
+</ul>
+<p>
+</p>
+<p>
+</p>
+</div>
+</section>
+</div>
+
+
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

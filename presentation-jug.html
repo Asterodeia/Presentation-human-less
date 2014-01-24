@@ -16,10 +16,9 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
-
-
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/perso-jug.css">
+		<link rel="stylesheet" href="js/highlight/styles/docco.css">
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
@@ -37,10 +36,11 @@
 <div>Geneva JUG 28/01/2014</div>
 </section>
 <section>           
+<h2>Audrey Lièvremont</h2>
 <div>
+<img id="avatar" src="images/avatar_octomom.png"/>
 <ul>
-<li>Audrey Lièvremont</li>
-<li>AIM</li>
+<li>Développeuse chez AIM</li>
 <li>jDuchess</li>
 <li>@alievremont</li>
 </ul>
@@ -58,7 +58,7 @@ Hypertext Markup Language
 </h2>
 </section>
 <section>     
-<pre><code style="text-align: center; "><a href="jug.html">HTML a été créé pour cela</a></font></code></pre>
+<pre><code class="lien-jug">&lt;a href="jug.html"&gt;HTML a été créé pour cela&lt;/a&gt;</font></code></pre>
 </section>
 <section>
 <h2>Historique</h2>
@@ -68,10 +68,10 @@ Hypertext Markup Language
 </div>
 </section>
 <section>
-<h2>Le HTML ne sert pas à décrire le <font color="#6aa84f">rendu</font> des pages</h2>
+<h2>Le HTML ne sert pas à décrire le <em>rendu</em> des pages</h2>
 </section>
 <section>
-<h2>Interopérabilité du <font color="#6aa84f">HTML</font>
+<h2>Interopérabilité du <em>HTML</em>
 </h2>
 <div>
     <br>
@@ -84,41 +84,37 @@ Hypertext Markup Language
 </div>
 <div>
 <ul>
-<li>
-<font color="#434343">Navigateurs desktop</font>
+<li>Navigateurs desktop
 </li>
-<li>
-<font color="#434343">Navigateurs mobiles</font>
+<li>Navigateurs mobiles
 </li>
-<li>
-<font color="#434343">Lecteurs d'écran</font>
+<li>Lecteurs d'écran
 </li>
-<li>
-<font color="#434343">Navigateurs en mode texte...</font>
+<li>Navigateurs en mode texte...
 </li>
 </ul>
 </div>
 </section>
-<section data-background-size="cover" data-background-image="images/ModeleMVC.png">
-<h2 class="absolute-element fragment" style="position: absolute; width: 188px; height: 64px; z-index: 4; left: 155px; top: 237px;">
-<font color="#6aa84f">HTML</font>
+<section id="mvc-model" data-background-size="cover" data-background-image="images/ModeleMVC.png">
+<h2 id="html-mvc" class="absolute-element fragment">
+HTML
 </h2>
-<h2 class="absolute-element fragment" style="position: absolute; width: 116px; height: 64px; z-index: 4; left: 362px; top: 408px;">
-<font color="#6aa84f">CSS</font>
+<h2 id="css-mvc" class="absolute-element fragment">
+CSS
 </h2>
-<h2 class="absolute-element fragment" style="position: absolute; width: 296px; height: 64px; z-index: 4; left: 437px; top: 238px;">
-<font color="#6aa84f">JavaScript</font>
+<h2 id="javascript-mvc" class="absolute-element fragment">
+JavaScript
 </h2>
 </section>
 </section>
 <section>
     <section>
-<h2>Pourquoi ne faut-il pas faire de mise en page avec des <font color="#6aa84f">&lt;table&gt; </font>
-        <font color="#434343">?</font>
+<h2>Pourquoi ne faut-il pas faire de mise en page avec des <em>&lt;table&gt; </em>
+<br/>?
 </h2>
     </section>
     <section>
-<h2>Parce que ce n'est <font color="#6aa84f">pas fait pour cela</font> !</h2>
+<h2>Parce que ce n'est <em>pas fait pour cela</em> !</h2>
 <div class="fragment">Oui, mais...</div>
     </section>
     <section>    
@@ -129,31 +125,28 @@ Hypertext Markup Language
 <pre><code>&lt;table&gt;</code><code>&lt;tr id="first"&gt;&lt;td colspan="3"&gt;1&lt;/td&gt;&lt;/tr&gt;</code><code>&lt;tr id="second"&gt;&lt;td colspan="2"&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;</code><code>&lt;tr id="third"&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;/tr&gt;</code><code>&lt;/table&gt;</code></pre>
 <h2 class="fragment" data-fragment-index="1">115 caractères</h2>
 <pre><code>&lt;div id="bloc1"&gt;1&lt;/div&gt;</code><code>&lt;div id="bloc2"&gt;2&lt;/div&gt;</code><code>&lt;div id="bloc3"&gt;3&lt;/div&gt;</code><code>&lt;div id="bloc4"&gt;4&lt;/div&gt;</code><code>&lt;div id="bloc5"&gt;5&lt;/div&gt;</code></pre>
-
 <h2 class="fragment" data-fragment-index="2">+ 39%</h2>
-
+</section>
+<section>
+<ul>
+<img src="images/table-2.png">
+</ul>
 </section>
 </section>
 <section>
+	<section>
     <h2>Références</h2>
 <div>
-<p>
-</p>
-<p>
-</p>
 <ul>
-<li>
-<font style="font-size: 24px;">Spécification de HTML living standards : http://www.whatwg.org/specs/web-apps/current-work/multipage/introduction.html#abstract</font>
-</li>
-<li>
-<font style="font-size: 24px;">Image sur le modèle MVC par Deltacen</font>
-</li>
+<li>Spécification de HTML living standards : http://www.whatwg.org/specs/web-apps/current-work/multipage/introduction.html#abstract</li>
 </ul>
-<p>
-</p>
-<p>
-</p>
 </div>
+</section>
+<section>
+<h2>Copyright</h2>
+<ul>
+<li>Image sur le modèle MVC par Deltacen</li>
+</ul>
 </section>
 </div>
 
@@ -186,7 +179,7 @@ Hypertext Markup Language
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'js/highlight/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]

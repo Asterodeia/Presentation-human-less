@@ -1,0 +1,47 @@
+@em-color: #490A3D;
+#avatar{
+    vertical-align: middle;   
+}
+
+.reveal section img {
+    border : none;   
+}
+
+em {
+    color: @em-color;
+    font-style: italic;
+}
+
+code {
+    &.lien-jug {
+        text-align: center;
+        font-size: 1.5em;
+    }
+}
+
+#mvc-model {
+    height: 600px;
+    h2 {
+        color: @em-color;   
+        position: absolute;
+        z-index: 4;
+        &#html-mvc{
+            width: 188px; 
+            height: 64px;
+            left: 140px; 
+            top: 100px;
+        }
+        &#css-mvc{
+            width: 116px; 
+            height: 64px;
+            left: 362px; 
+            top: 408px;
+        }
+        &#javascript-mvc{
+            width: 296px; 
+            height: 64px; 
+            left: 457px; 
+            top: 100px;
+        }
+    }
+}

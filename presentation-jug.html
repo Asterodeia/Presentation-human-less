@@ -95,7 +95,7 @@ Hypertext Markup Language
 </ul>
 </div>
 </section>
-<section id="mvc-model" data-background-size="cover" data-background-image="images/ModeleMVC.png">
+<section id="mvc-model" data-background-size="1000px" data-background-image="images/ModeleMVC.png">
 <h2 id="html-mvc" class="absolute-element fragment">
 HTML
 </h2>
@@ -125,14 +125,137 @@ JavaScript
     <section>
 <h2 class="fragment" data-fragment-index="0">160 caractères</h2>
 <pre><code>&lt;table&gt;</code><code>&lt;tr id="first"&gt;&lt;td colspan="3"&gt;1&lt;/td&gt;&lt;/tr&gt;</code><code>&lt;tr id="second"&gt;&lt;td colspan="2"&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;</code><code>&lt;tr id="third"&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;/tr&gt;</code><code>&lt;/table&gt;</code></pre>
-<h2 class="fragment" data-fragment-index="1">115 caractères</h2>
-<pre><code>&lt;div id="bloc1"&gt;1&lt;/div&gt;</code><code>&lt;div id="bloc2"&gt;2&lt;/div&gt;</code><code>&lt;div id="bloc3"&gt;3&lt;/div&gt;</code><code>&lt;div id="bloc4"&gt;4&lt;/div&gt;</code><code>&lt;div id="bloc5"&gt;5&lt;/div&gt;</code></pre>
-<h2 class="fragment" data-fragment-index="2">+ 39%</h2>
+<h2 class="fragment" data-fragment-index="1">138 caractères</h2>
+<pre><code>&lt;div id="bloc1"&gt;1&lt;/div&gt;</code><code>&lt;div id="bloc2"&gt;2&lt;/div&gt;</code><code>&lt;div id="bloc3"&gt;3&lt;/div&gt;</code><code>&lt;div id="bloc4"&gt;4&lt;/div&gt;</code><code>&lt;div id="bloc5"&gt;5&lt;/div&gt;</code><code>&lt;div id="bloc6"&gt;6&lt;/div&gt;</code></pre>
+<h2 class="fragment" data-fragment-index="2">+ 16%</h2>
 </section>
 <section>
 <h2>Ce n'est <em>pas</em> (main)tenable !</h2>
 <img src="images/table-2.png">
 </section>
+</section>
+<section>
+<section>
+	<h2>Pourquoi faut-il utiliser les <em>&lt;table&gt; </em></h2>
+</section>
+<section>
+	<table>
+		<tr><th>Présentation</th><th>Speaker</th><th>&Ccedil;a m'intéresse ?</th></tr>
+	</table>
+</section>
+<section>
+	<pre><code>&lt;div class="table"&gt;
+  &lt;div class="tr"&gt;
+    &lt;div class="th"&gt;
+      Pr&eacute;sentation
+    &lt;/div&gt;
+    &lt;div class="th"&gt;
+      Speaker
+    &lt;/div&gt;
+...</code></pre>
+<br/>
+<pre><code>.table{
+  display: table;
+}
+.tr{
+  display: table-row;
+}
+.th{
+  display: table-cell;
+}
+</code></pre>
+</section>
+<section>
+	<pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;
+      Pr&eacute;sentation
+    &lt;/th&gt;
+    &lt;th&gt;
+      Speaker
+    &lt;/th&gt;
+...</code></pre>
+</section>
+</section>
+<section>
+<section>
+	<h2>De l'importance de la sémantique</h2>
+	<pre><code>String attribut1;
+String attribut2;
+String attribut3;</code></pre>
+</section>
+<section>
+<pre><code>&lt;div id="bloc1"&gt;
+&lt;/div&gt;
+&lt;div id="bloc2"&gt;
+&lt;/div&gt;
+&lt;div id="bloc3"&gt;
+&lt;/div&gt;</pre></code>
+</section>
+<section>
+<h2>Nommons nos variables</h2>
+<pre><code>&lt;div id="titre"&gt;
+&lt;/div&gt;
+&lt;div id="sous-titre"&gt;
+&lt;/div&gt;
+&lt;div id="contenu"&gt;
+&lt;/div&gt;</code></pre>
+</section>
+<section>
+<h2>Typons nos variables</h2>
+<pre><code>int floor;
+int nbUsers;</code></pre>
+<pre><code>Floor floor;
+Users nbUsers;</code></pre>
+</section>
+<section>
+<pre><code>&lt;h1&gt;Clean HTML&lt;/h1&gt;
+&lt;h2&gt;Pourquoi la sémantique, c'est bien&lt;/h2&gt;
+&lt;p&gt;...
+&lt;/p&gt;</code></pre>
+</section>
+<section>
+<h2>The problem with <em>&lt;div&gt;</em></h2>
+<pre><code>&lt;div id="page"&gt;
+  &lt;div id="conteneur"&gt;
+    &lt;div id="contenu"&gt;
+	...
+	...
+	...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</section>
+<section>
+<h2>The problem with <em>&lt;div&gt;</em></h2>
+<pre><code>&lt;div id="page"&gt;
+  &lt;div id="conteneur"&gt;
+    &lt;div id="contenu"&gt;
+	...
+	...
+	...
+    &lt;/div&gt;&lt;!--contenu--&gt;
+  &lt;/div&gt;&lt;!--conteneur--&gt;
+&lt;/div&gt;&lt;!--page--&gt;</code></pre>
+</section>
+</section>
+<section>
+<section>
+<h2>Le <em>balisage</em> HTML5</h2>
+<pre><code>&lt;header&gt;</code></pre>
+<pre><code>&lt;footer&gt;</code></pre>
+<pre><code>&lt;nav&gt;</code></pre>
+<pre><code>&lt;article&gt;</code></pre>
+<pre><code>&lt;template&gt;</code></pre>
+</section>
+<section>
+<h2>Not so clean <em>HTML</em></h2>
+<pre><code>&lt;audio&gt;</code></pre>
+<pre><code>&lt;video&gt;</code></pre>
+</section>
+</section>
+<section>
+<img src="images/boxer.gif" alt="des questions ?"/>
 </section>
 <section>
 	<section>
@@ -171,7 +294,7 @@ JavaScript
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',

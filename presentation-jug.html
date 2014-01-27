@@ -136,20 +136,26 @@ JavaScript
 </section>
 <section>
 <section>
-	<h2>Pourquoi faut-il utiliser les <em>&lt;table&gt; </em></h2>
+	<h2>Pour quoi faut-il utiliser les <em>&lt;table&gt; </em></h2>
 </section>
 <section>
-	<table>
+	<table class="tableau-exemple">
 		<tr><th>Présentation</th><th>Speaker</th><th>&Ccedil;a m'intéresse ?</th></tr>
+		<tr><td>Clean HTML</td><td>Audrey Lièvremont</td><td>Oui!</td></tr>
+		<tr><td>Les spécificités des tests d’intégration</td><td>Nicolas Fränkel</td><td>Oui!</td></tr>
+		<tr><td>Centre de développement agile chez Nespresso : retour d’expérience</td><td>Guillaume Vial</td><td>Oui!</td></tr>
+		<tr><td>Git : un workflow simple et efficace</td><td>Teryk Bellahsene</td><td>Oui!</td></tr>
+		<tr><td>Comment avantageusement remplacer Excel par R pour traiter vos fichiers de log</td><td>Philippe Kernevez</td><td>Oui!</td></tr>
+		<tr><td>Reverse Psychologie in Java development</td><td>Nicolas Peru</td><td>Oui!</td></tr>
 	</table>
 </section>
 <section>
 	<pre><code>&lt;div class="table"&gt;
-  &lt;div class="tr"&gt;
-    &lt;div class="th"&gt;
+  &lt;div class="ligne titre"&gt;
+    &lt;div class="cellule"&gt;
       Pr&eacute;sentation
     &lt;/div&gt;
-    &lt;div class="th"&gt;
+    &lt;div class="cellule"&gt;
       Speaker
     &lt;/div&gt;
 ...</code></pre>
@@ -157,10 +163,10 @@ JavaScript
 <pre><code>.table{
   display: table;
 }
-.tr{
+.ligne{
   display: table-row;
 }
-.th{
+.cellule{
   display: table-cell;
 }
 </code></pre>
@@ -179,8 +185,8 @@ JavaScript
 </section>
 <section>
 <section>
-	<h2>De l'importance de la sémantique</h2>
-	<pre><code>String attribut1;
+<h2>De l'importance de la sémantique</h2>
+<pre><code>String attribut1;
 String attribut2;
 String attribut3;</code></pre>
 </section>
@@ -209,6 +215,12 @@ int nbUsers;</code></pre>
 Users nbUsers;</code></pre>
 </section>
 <section>
+<pre><code>&lt;div class="titre"&gt;
+&lt;/div&gt;
+&lt;div class="sous-titre"&gt;
+&lt;/div&gt;
+&lt;div class="contenu"&gt;
+&lt;/div&gt;</code></pre>
 <pre><code>&lt;h1&gt;Clean HTML&lt;/h1&gt;
 &lt;h2&gt;Pourquoi la sémantique, c'est bien&lt;/h2&gt;
 &lt;p&gt;...
@@ -258,16 +270,17 @@ Users nbUsers;</code></pre>
 <img src="images/boxer.gif" alt="des questions ?"/>
 </section>
 <section>
-	<section>
+	<section id="references">
     <h2>Références</h2>
 <div>
 <ul>
 <li>Spécification de HTML living standards : http://www.whatwg.org/specs/web-apps/current-work/multipage/introduction.html#abstract</li>
 <li>http://www.cybercodeur.net/weblog/presentations/seybold/everything.html</li>
+<li>http://www.html5rocks.com/en/tutorials/webcomponents/template/</li>
 </ul>
 </div>
 </section>
-<section>
+<section id="copyright">
 <h2>Copyright</h2>
 <ul>
 <li>Image sur le modèle MVC par Deltacen</li>
